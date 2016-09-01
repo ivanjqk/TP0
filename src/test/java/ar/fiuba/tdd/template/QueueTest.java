@@ -35,7 +35,7 @@ public class QueueTest {
     }
 
     @Test
-    public void isEmptyReturnsFalseWhenItStillHasAnElementAfterAPop() throws Exception {
+    public void isEmptyReturnsFalseWhenItStillHasAnElementAfterARemove() throws Exception {
         Queue<Integer> queue = new Queue<Integer>();
         queue.add(0);
         queue.add(1);
@@ -65,7 +65,7 @@ public class QueueTest {
     }
 
     @Test
-    public void sizeReturns1WhenItHasOneElementAfterAPop() throws Exception {
+    public void sizeReturns1WhenItHasOneElementAfterARemove() throws Exception {
         Queue<Integer> queue = new Queue<Integer>();
         queue.add(0);
         queue.add(1);
@@ -74,7 +74,7 @@ public class QueueTest {
     }
 
     @Test
-    public void sizeReturn0WhenItIsEmptyAfterTwoPops() throws Exception {
+    public void sizeReturn0WhenItIsEmptyAfterTwoRemoves() throws Exception {
         Queue<Integer> queue = new Queue<Integer>();
         queue.add(0);
         queue.add(1);
@@ -99,7 +99,7 @@ public class QueueTest {
     }
 
     @Test
-    public void addAndTopAfterOnePop() throws Exception {
+    public void addAndTopAfterOneRemove() throws Exception {
         Queue<Integer> queue = new Queue<Integer>();
         queue.add(0);
         queue.remove();
@@ -121,7 +121,7 @@ public class QueueTest {
     }
 
     @Test(expected = AssertionError.class)
-    public void topThrowsAssertionErrorWithEmptyQueueAfterOnePop() throws Exception {
+    public void topThrowsAssertionErrorWithEmptyQueueAfterOneRemove() throws Exception {
         Queue<Integer> queue = new Queue<Integer>();
         queue.add(0);
         queue.remove();
@@ -129,7 +129,7 @@ public class QueueTest {
     }
 
     @Test(expected = AssertionError.class)
-    public void removeThrowsAssertionErrorWithEmptyQueueAfterOnePop() throws Exception {
+    public void removeThrowsAssertionErrorWithEmptyQueueAfterOneRemove() throws Exception {
         Queue<Integer> queue = new Queue<Integer>();
         queue.add(0);
         queue.remove();
